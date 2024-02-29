@@ -11,6 +11,7 @@ describe('Add new Computer', () => {
 
     LandingPage.addNewComputerClick()
     AddNewComputerPage.fieldValidations()
+    AddNewComputerPage.addComputerFieldErrors()
     AddNewComputerPage.fillFieldsAndCLickonCreaThisComputerButton();
 
   })

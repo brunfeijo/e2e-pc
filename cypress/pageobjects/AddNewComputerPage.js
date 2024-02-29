@@ -18,6 +18,21 @@ class AddNewComputerPage {
     }
 
 
+    addComputerFieldErrors() {
+
+        cy.get('#name').type('-');
+        cy.get('#introduced').type('1234');
+        cy.get('#discontinued').type('1234');
+        cy.get('.primary').click();
+        cy.get(':nth-child(2) > .input > .help-inline').should('be.visible');
+        cy.get(':nth-child(2) > .input > .help-inline').should('have.text', 'Failed to decode date : java.time.format.DateTimeParseException: Text \'1234\' could not be parsed at index 4');
+        cy.get(':nth-child(2) > .input > .help-inline').should('have.text', 'Failed to decode date : java.time.format.DateTimeParseException: Text \'1234\' could not be parsed at index 4');
+        cy.get(':nth-child(3) > .input > .help-inline').should('be.visible');
+
+    }
+
+
+
     fillFieldsAndCLickonCreaThisComputerButton() {
 
 
