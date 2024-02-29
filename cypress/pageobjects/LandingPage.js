@@ -25,6 +25,15 @@ class LandingPage {
     }
 
 
+    searchBoxType() {
+
+        cy.get('#searchbox').type('ARRA')
+        
+
+
+    }
+
+
     searchButtonValidations() {
 
         cy.get('#searchsubmit').should('be.enabled');
@@ -58,6 +67,17 @@ class LandingPage {
 
         cy.get('table.computers.zebra-striped tbody tr').its('length').should('eq', 10);
     }
+
+    filterByNameClick() {
+
+
+        cy.get('#searchsubmit').click()
+
+
+    }
+
+
+
 }
 
 export default new LandingPage();

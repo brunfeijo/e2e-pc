@@ -18,7 +18,7 @@ class AddNewComputerPage {
     }
 
 
-    fillFieldsAndCLickonCreathisComputerButton() {
+    fillFieldsAndCLickonCreaThisComputerButton() {
 
 
         cy.get('#name').type('FeijoTest');
