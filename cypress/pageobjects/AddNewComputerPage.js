@@ -18,9 +18,22 @@ class AddNewComputerPage {
     }
 
 
+    fillFieldsAndCLickonCreathisComputerButton() {
 
+
+        cy.get('#name').type('FeijoTest');
+        cy.get('#introduced').type('1987-01-01');
+        cy.get('#discontinued').type('2050-01-01');
+        cy.get('#company').select('Apple Inc.') // Select the 'user-1' option
+        cy.get('.primary').click();
+        cy.get('.alert-message').should('be.visible');
+        cy.get('.alert-message').should('be.visible');
+
+
+    }
 
 
 }
 
 export default new AddNewComputerPage();
+

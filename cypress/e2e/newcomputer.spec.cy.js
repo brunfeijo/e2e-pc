@@ -3,18 +3,18 @@ import LandingPage from "../pageobjects/landingPage";
 import AddNewComputerPage from "../pageobjects/AddNewComputerPage";
 
 describe('Add new Computer', () => {
-  beforeEach(() => {
-    LandingPage.computerDataBasePage()
+  before(() => {
+    cy.visit('/')
   })
 
-  it('Click "Add a New Computer and Validates Fields', () => {
+  it('Click "Add a New Computer and Add One', () => {
 
     LandingPage.addNewComputerClick()
     AddNewComputerPage.fieldValidations()
+    AddNewComputerPage.fillFieldsAndCLickonCreathisComputerButton();
+
   })
 
-  
-  
 })
 
 
