@@ -27,8 +27,29 @@ class EditPage {
 
 
     }
+
+    deleteThisComputerButton() {
+
+        /* ==== Generated with Cypress Studio ==== */
+        cy.get('.topRight > .btn').should('be.visible');
+        cy.get('.topRight > .btn').should('have.value', 'Delete this computer');
+        cy.get('.topRight > .btn').click();
+
+    }
+
+    deleteSuccessRibon() {
+
+        /* ==== Generated with Cypress Studio ==== */
+
+        cy.get('.alert-message').should('be.visible');
+        cy.get('.alert-message').should('have.text', 'Done !  Computer ARRA has been deleted');
+
+
+
+
+
+    }
 }
 
 export default new EditPage();
-
 
