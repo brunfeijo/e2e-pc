@@ -13,6 +13,7 @@ describe('Searches and Edit a Computer', () => {
         LandingPage.filterByNameClick();
         EditPage.searchResult();
         EditPage.EditComputerPage();
+        EditPage.saveThisComputerButton();
         EditPage.editRibbonValidation();
 
     })

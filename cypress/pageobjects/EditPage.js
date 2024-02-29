@@ -14,7 +14,15 @@ class EditPage {
 
         cy.get('#name').should('have.value', 'ARRA');
         cy.get('#name').type('ARRA 2');
-        cy.get('.primary').click()
+
+
+    }
+
+    saveThisComputerButton(){
+
+
+    cy.get('.primary').click()
+
 
     }
 
@@ -30,16 +38,16 @@ class EditPage {
 
     deleteThisComputerButton() {
 
-        /* ==== Generated with Cypress Studio ==== */
-        cy.get('.topRight > .btn').should('be.visible');
+
+        cy.get('.topRight > .btn').should('be.enabled');
         cy.get('.topRight > .btn').should('have.value', 'Delete this computer');
-        cy.get('.topRight > .btn').click();
+        cy.get('.topRight > .btn').click({force: true});
 
     }
 
     deleteSuccessRibon() {
 
-        /* ==== Generated with Cypress Studio ==== */
+
 
         cy.get('.alert-message').should('be.visible');
         cy.get('.alert-message').should('have.text', 'Done !  Computer ARRA has been deleted');

@@ -12,9 +12,9 @@ describe('Searches and Edit a Computer', () => {
         LandingPage.searchBoxType();
         LandingPage.filterByNameClick();
         EditPage.searchResult();
-        EditPage.EditComputerPage();
         EditPage.deleteThisComputerButton();
         
+
 
     })
 
